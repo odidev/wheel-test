@@ -1,16 +1,14 @@
+language: c
+services: docker
 os: linux
-language: generic
-branches:
-  only:
-    - master
 
 matrix:
   include:
-    - sudo: required
-      services:
-        - docker
-      env: DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
-           PLAT=manylinux2014_aarch64
+    - os: linux
+      arch: arm64
+      env:
+       - DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
+       - PLAT=aarch64
 
 install:
   - docker pull $DOCKER_IMAGE
