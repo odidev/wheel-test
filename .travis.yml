@@ -9,6 +9,11 @@ matrix:
       env:
        - DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
        - PLAT=aarch64
+    - os: linux
+      arch: arm64-graviton2
+      env:
+       - DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
+       - PLAT=aarch64
 
 install:
   - docker pull $DOCKER_IMAGE
