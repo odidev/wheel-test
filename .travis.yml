@@ -11,6 +11,9 @@ matrix:
        - PLAT=aarch64
     - os: linux
       arch: arm64-graviton2
+      dist: focal
+      virt: lxd
+      group: edge
       env:
        - DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
        - PLAT=aarch64
