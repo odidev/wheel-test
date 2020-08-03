@@ -19,6 +19,7 @@ matrix:
        - PLAT=aarch64
 
 install:
+  - uname -m
   - docker pull $DOCKER_IMAGE
 
 script:
